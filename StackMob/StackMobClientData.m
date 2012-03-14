@@ -23,6 +23,7 @@
 #endif
 #include <net/if.h>
 #include <net/if_dl.h>
+#import "UIDevice+IdentifierAddition.h"
 
 NSString *bundleVersion = @"";
 NSString *identifier = @"";
@@ -51,7 +52,7 @@ static StackMobClientData * _sharedInstance=nil;
 #if TARGET_OS_IPHONE
 		// Device info.
 		UIDevice *device = [UIDevice currentDevice];
-		identifier = [[device uniqueIdentifier] retain];
+		identifier = [[device uniqueDeviceIdentifier] retain];
 		model = [[device model] retain];
 		systemVersion = [[device systemVersion] retain];
 #endif		
