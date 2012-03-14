@@ -385,7 +385,7 @@
       if ([textResult length]<=maxDumpSize) {
         SMLog(@"RESPONSE BODY %@", textResult);
       } else {
-        SMLog(@"RESPONSE BODY (truncated to %lu of %lu) %@", maxDumpSize, [textResult length], [textResult substringToIndex:maxDumpSize]);
+        SMLog(@"RESPONSE BODY (truncated to %d of %d) %@", maxDumpSize, [textResult length], [textResult substringToIndex:maxDumpSize]);
       }
     }
     
